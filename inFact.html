@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial</title>
+</head>
+<body>
+    <script>
+
+<!--Рекурсия -->
+        var start1 = 0;
+        var finish1 = 0;
+
+        var number = parseInt(prompt("Enter number: "));
+        start1 = Date.now();
+
+        function fact (number) {
+
+            if (number == 1){
+                return 1;
+            } else {
+                return number * fact(number - 1);
+            }
+        }
+        finish1 = Date.now();
+        alert("Факториал числа равен: " + fact(number));
+
+        var check1 = finish1 - start1;
+        console.log(check1);
+
+<!--Цикл -->
+        var start2 = 0;
+        var finish2 = 0;
+        var numberCycle = parseInt(prompt("Enter number: "));
+        start2 = Date.now();
+
+        function factCycle (numberCycle) {
+
+            var result = 1;
+
+            for (let i = 1; i <= numberCycle; i++) {
+                result = result * i;
+
+            }
+            return result;
+        }
+        finish2 = Date.now();
+        alert("Факториал числа равен: " + factCycle(numberCycle));
+
+        var check2 = finish2 - start2;
+        console.log(check2);
+
+    </script>
+</body>
+</html>
